@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="Search Page" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <title>Страница поиска</title>
+		<style>
+body{
+	background-image: url(../static/fence.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.content-box{
+	text-align: center;
+	padding: 220px 0;
+    color: #9C331C;
+	font-family: Trebuchet MS;
+	font-size: 30px;
+	background-color: rgba(45, 56, 74, 0.7);
+}
+.search-form{
+	font-family: Trebuchet MS;
+	font-size: 10px;
+    height: 60px;
+	width: 700px;
+    text-indent: 33px;
+    border-radius: 45px 0px 0px 45px;
+	border-width: 0px;
+}
+.search-type{
+	font-family: Trebuchet MS;
+	font-size: 10px;
+    height: 60px;
+	width: 200px;
+    text-indent: 33px;
+    border-radius: 0px 45px 45px 0px;
+	border-width: 0px;
+}
+.sel_nums{
+	font-family: Trebuchet MS;
+	font-size: 16px;
+    height: 30px;
+	width: 50px;
+    text-indent: 5px;
+    border-radius: 10px 10px 10px 10px;
+	border-width: 0px;
+}
+.submit_btn{
+	font-family: Trebuchet MS;
+	font-size: 16px;
+    height: 30px;
+	width: 150px;
+    text-indent: 5px;
+    border-radius: 10px 10px 10px 10px;
+	border-width: 0px;
+}
+		</style>
+    </head>
+    <body class="home" id="page">
+		<div class="content-box">
+			<div class="search-header">
+				<h1>Поиск по роману "Пикник на обочине"</h1>
+			</div>
+				<form action="/results" class="search_box">
+					<div class="input_box">
+						<input type="text" name="query" placeholder="Введите запрос" class="search-form" style="font-size:18px;">
+						<! <input type="submit" name="submit" value="Parse" class="submit_button">
+						<select name="methods" class="search-type" id="methods" style="font-size:18px;">
+							<option value="bm25">BM25</option>
+							<option value="word2vec">Word2Vec</option>
+							<option value="fasttext">FastText</option>
+							<option value="ai">AI</option>
+						</select>
+						<br>
+						<p style="font-size:16px;">Количество результатов на странице: <input type="number" name="num" placeholder="5" class="sel_nums"></p>
+						<input type="submit" value="Искать" class="submit_btn">
+					</div>
+					
+				</form>
+		</div>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <meta name="description" content="Результаты поиска" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <title>Результаты</title>
+		<style>
+body{
+	background-image: url(../static/walk.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.results{
+    color: white;
+	background-color: rgba(45, 56, 74, 0.8);
+}
+.time{
+    color: white;
+	background-color: rgba(45, 56, 74, 0.8);
+}
+.num{
+	font-size: 30px;
+	font-family: Trebuchet MS;
+	text-align: center;
+	width: 80px;
+}
+
+.pretext{
+	text-align: center;
+	color: #9C331C;
+	font-size: 50px;
+	font-family: Lucida Console;
+}
+.word_analysis{
+	color: white;
+	table-layout: auto;
+	font-family: Trebuchet MS;
+	width: 100%;
+	font-size: 28px;
+}
+		</style>
+    </head>
+
+    <body>
+		<div class="pretext">Результаты поиска:</div>
+		<hr>
+		<div class="results">
+			<table class="output">
+			{% for i in range(0, results|length) %}
+				<tr>
+					<td>{{ results[i] }}</td>
+				</tr>
+			{% endfor %}
+			</table>
+		</div>
+		<p class="time">{{ time }}</p>
+    </body>
+</html>

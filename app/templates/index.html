@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="Start" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <title>Начальная страница</title>
+		<style>
+body{
+	background-image: url(../static/heli.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.content-box{
+	text-align: center;
+	padding: 220px 0;
+    color: #9C331C;
+	font-family: Trebuchet MS;
+	font-size: 30px;
+	background-color: rgba(45, 56, 74, 0.7);
+}
+.submit_btn{
+	font-family: Trebuchet MS;
+	font-size: 16px;
+    height: 30px;
+	width: 150px;
+    text-indent: 5px;
+    border-radius: 10px 10px 10px 10px;
+	border-width: 0px;
+}
+.credits{
+	font-size: 20px;
+	color: white;
+    position: absolute;
+    bottom: 0;
+}
+		</style>
+    </head>
+    <body class="home" id="page">
+		<div class="content-box">
+			<div class="search-header">
+				<h1>Поисковик для романа "Пикник на обочине"</h1>
+			</div>
+			<div class="description">
+				<p>В рамках этого проекта была создана поисковая система для корпуса, основанного на романе "Пикник на обочине" Аркадия 
+				и Бориса Стругацких. Для поиска можно использовать вектора BM25, Word2Vec, FastText и эмбеддинги нейронной сети.</p>
+			</div>
+			<form action="/search" class="start">
+				<input type="submit" value="Перейти к поиску" class="submit_btn">
+			</form>
+			<div class="credits">
+				<p>© Филипп Бурлаков 2023</p>
+			</div>
+		</div>
+
+    </body>
+</html>
